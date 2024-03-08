@@ -11,20 +11,21 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import com.example.demo.Activity;
-import com.example.demo.ActivityUtils;
-import com.example.demo.AggregatedActivity;
+import com.activity.model.ActivityLog;
+import com.activity.model.AggregatedActivity;
+import com.activity.service.ActivityService;
+import com.activity.utils.ActivityUtils;
 
 @ExtendWith(MockitoExtension.class)
 public class ActivityServiceTest {
 
 	@Test
 	public void testCalculator() {
-		ActivityUtils<Activity> au = new ActivityUtils<>();
+		ActivityUtils<ActivityLog> au = new ActivityUtils<>();
 		
 		ActivityService activityService= new ActivityService();
 		
-		List<Activity> activityList= new ArrayList<>();
+		List<ActivityLog> activityList= new ArrayList<>();
 		
 		activityList.add(createActivity("painting", LocalDate.now(), 30));
 		activityList.add(createActivity("Yoga", LocalDate.now(), 40));
@@ -60,8 +61,8 @@ public class ActivityServiceTest {
 		au.display(aaList);
 	}
 	
-	private static Activity createActivity(String name, LocalDate date, int time) {
-		Activity a1= new Activity();
+	private static ActivityLog createActivity(String name, LocalDate date, int time) {
+		ActivityLog a1= new ActivityLog();
 		a1.setActivityName(name);
 		a1.setDateLogged(date);
 		a1.setTimeSpent(time);

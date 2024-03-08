@@ -1,8 +1,8 @@
-package com.example.demo;
+package com.activity.model;
 
 import java.time.LocalDate;
 
-public class Activity {
+public class ActivityLog {
 
 	private int timeSpent;
 	private String activityName;

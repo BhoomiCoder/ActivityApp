@@ -1,8 +1,11 @@
-package com.example.demo;
+package com.activity.utils;
 
 import java.util.List;
 
-public class ActivityUtils<T extends Activity> {
+import com.activity.model.ActivityLog;
+import com.activity.model.AggregatedActivity;
+
+public class ActivityUtils<T extends ActivityLog> {
 
 	public void display(List<? extends T> activity) {
 		

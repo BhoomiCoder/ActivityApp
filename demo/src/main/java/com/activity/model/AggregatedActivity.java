@@ -1,6 +1,6 @@
-package com.example.demo;
+package com.activity.model;
 
-public class AggregatedActivity extends Activity implements Comparable<AggregatedActivity>{
+public class AggregatedActivity extends ActivityLog implements Comparable<AggregatedActivity>{
 
 	private int aggregatedTime;
 
